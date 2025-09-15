@@ -1,3 +1,43 @@
+/* Vars */
+:root {
+    --bg: #060911;
+    --surface: #0E111B;
+    --surface-2: #1A1F2E;
+    --text: #F0F5FF;
+    --primary: #CA79FF;
+    --secondary: #00D2FD;
+    --accent: #FF49BA;
+    --warning: #E6CC00;
+    --danger: #F93247;
+
+    --body-font: 16px;
+    --small-font: 15px;
+    --caption-font: 13px;
+
+    --font-weight: 600;
+
+    --section-radius: 24px;
+    --form-radius: 16px;
+    --article-radius: 24px;
+
+    --section-padding: 25px 25px;
+    --form-padding: 13px 17px;
+    --article-padding: 24px 25px 25px;
+
+    --card-grid-gap-main: 12px;
+    --card-grid-gap-articles: 16px;
+    --article-gap: 12px;
+
+    --tags-padding-top: 4px;
+    --tags-gap: 8px;
+
+    --badge-padding: 5.59px 10.6px 7.1px;
+    --badge-radius: 16px;
+
+    --h1-font-size: 36px;
+    --h1-font-weight: bold;
+}
+
 /* Reset */
 *{
     margin: 0;
@@ -8,11 +48,19 @@
 body{
     background-color: darkgray;
     min-height: 100svh;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+h1{
+    font-family: 'Playfair Display', 'Libre Baskerville', Georgia, serif;
+    font-size: var(--h1-font-size);
+    font-weight: var(--h1-font-weight);
 }
 
 header{
@@ -28,7 +76,8 @@ main{
 
 section{
     background-color: aliceblue;
-    padding: 20px;
+    padding: var(--section-padding);
+    border-radius: var(--section-radius);
 }
 
 footer{
@@ -41,14 +90,43 @@ footer{
 #card-grid{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: var(--card-grid-gap-main);
 }
 
 #articles{
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: var(--card-grid-gap-articles);
     justify-content: space-between;
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    padding: var(--article-padding);
+    gap: var(--article-gap);
+    border-radius: var(--article-radius);
+
+    border-color: #CA79FF;
+    border-style: solid;
+}
+
+article p{
+    font-size: 16px;
+}
+
+.tags{
+    display: flex;
+    gap: var(--tags-gap);
+    padding-top: var(--tags-padding-top);
+}
+
+.tags span{
+    background-color: antiquewhite;
+    padding: var(--badge-padding);
+    border-radius: var(--badge-radius);
+    font-size: var(--small-font);
+    font-weight: var(--font-weight);
 }
 
 /* From */
@@ -70,13 +148,22 @@ form{
     flex-direction: column;
 }
 
+input, textarea{
+    padding: var(--form-padding);
+    font-size: var(--small-font);
+    border-radius: var(--form-radius);
+}
+
 #message{
     resize: none;
-    height: 50px;
+    height: 100px;
 }
 
 button{
     width: fit-content;
-    padding: 10px;
+    padding: 13px 17px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 16px;
 }
 
