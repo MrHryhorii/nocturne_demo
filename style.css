@@ -94,13 +94,15 @@ h1{
     font-family: var(--extra-font-family);
     font-size: var(--h1-font-size);
     font-weight: var(--h1-font-weight);
-    height: 42px;
+    min-height: 42px;
     margin-top: 7px;
     margin-bottom: 7px;
 }
 
 header{
     margin-top: 47px;
+    display: flex;
+    flex-direction: column;
 }
 
 header p{
@@ -123,6 +125,8 @@ section{
 footer{
     margin-top: 48px;
     margin-bottom: 20px;
+    padding-left: 16px;
+    padding-right: 16px;
     display: flex;
     justify-content: space-between;
 }
@@ -167,6 +171,7 @@ h2{
 }
 
 article{
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     padding: var(--article-padding);
@@ -247,14 +252,25 @@ button{
     font-size: 13px;
     font-weight: 600;
     border-radius: 16px;
+
+    cursor: pointer;
+    transition: transform 0.2s ease-out;
+}
+
+button:hover{
+    transform: translateY(-1px);
+}
+
+button:active{
+    transform: translateY(0px);
 }
 
 /* colors */
-/*
+
 body{
     background-color: var(--bg);
 }
-*/
+
 h1, h2, h3, button, span{
     color: var(--text);
 }
@@ -269,6 +285,8 @@ input, textarea{
 
     border: none;
     transition: all 0.2s ease-in-out;
+
+    font-family: var(--body-font);
 }
 
 input:focus, textarea:focus{
@@ -305,9 +323,45 @@ article{
     border-width: 2px;
 }
 
-#hero-buttons button:first-of-type{
+#hero-buttons button:first-of-type, #send{
     box-shadow: var(--btn-shadow);
     border-color: var(--btn-border);
     border-style: solid;
     border-width: 2px;
+
+    background: linear-gradient(var(--btn-normal-from), var(--btn-normal-to));
+    transition: all 0.2s ease;
+}
+
+#hero-buttons button:first-of-type:hover, #send:hover{
+    box-shadow: 0px 0px 5px var(--primary);
+}
+
+#hero-buttons button:first-of-type:active, #send:active{
+    transform: translateY(0px);
+}
+
+#hero-buttons button:last-of-type{
+    box-shadow: var(--btn-shadow);
+    border: none;
+    background-color: #00000000;
+    transition: all 0.2s ease;
+}
+
+#hero-buttons button:last-of-type:hover{
+    outline-style: solid;
+    outline-width: 1px;
+    outline-color: var(--primary);
+    box-shadow: 0px 0px 5px var(--primary);
+}
+
+header{
+    padding: calc(20px - .5%);
+}
+
+/*
+@media (max-width: 1220px) {
+    header{
+        padding-left: 24px;
+    }
 }
