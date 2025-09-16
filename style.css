@@ -4,11 +4,33 @@
     --surface: #0E111B;
     --surface-2: #1A1F2E;
     --text: #F0F5FF;
+    --subtext: #B8BDCB;
     --primary: #CA79FF;
     --secondary: #00D2FD;
     --accent: #FF49BA;
     --warning: #E6CC00;
     --danger: #F93247;
+
+    --border: #291D3C;
+    --badge-2: #00D3FF33; /* with 20% transparency */
+    --badge-2-border: #00D3FF59; /* with 35% transparency */
+    --badge-3: #FF4ABA33; /* with 20% transparency */
+    --badge-3-border: #FF4ABA59; /* with 35% transparency */
+    --btn-border: #CA79FF8C; /* with 55% transparency */
+
+
+    --btn-normal-from:#CA79FFCC; /* with 80% transparency */
+    --btn-normal-to:#CA79FF99;  /* with 60% transparency */
+
+    --btn-hover-from:#CA79FFCC; /* with 80% transparency */
+    --btn-hover-to:#FFFFFF99;  /* with 60% transparency */
+
+    --btn-active-from:#9B00FFCC; /* with 80% transparency */
+    --btn-active-to:#CA79FF99;  /* with 60% transparency */
+
+    --grid-section-shadow: 0px 8px 24px #00000059;
+    --btn-shadow: 0 1 2 #0000004D;
+
 
     --body-font-family: 'Inter', Arial, sans-serif;
     --extra-font-family: 'Playfair Display', 'Libre Baskerville', Georgia, serif;
