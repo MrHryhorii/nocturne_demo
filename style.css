@@ -78,6 +78,11 @@
     box-sizing: border-box;
 }
 
+/* Main*/
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: rgb(78, 78, 78);
     min-height: 100svh;
