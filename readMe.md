@@ -21,5 +21,5 @@ _(or open `index.html` directly in your browser when running locally)_
 
 ## ✅ Notes
 
-- Accessibility checked with [WAVE](https://wave.webaim.org/) – no major issues found
+- Accessibility checked with [WAVE](https://wave.webaim.org/report#/mrhryhorii.github.io/nocturne_demo/) – no major issues found
 - This delivery is a **foundation / skeleton**, meant to be expanded with more components later
